@@ -1,0 +1,17 @@
+﻿@model IEnumerable<TravelForum.Models.Topic>
+@{
+    ViewBag.Title = "Index";
+}
+
+<ul class="list-group-flush">
+    @foreach (var topic in Model)
+    {
+
+        <li class="list-group-item">
+            @Html.ActionLink(topic.TopicName, "ShowTopic", new { id = topic.ID })
+            @*<a>@post.Subject</a>
+                <span class="badge badge-primary badge-pill">@post.ID</span>*@
+        </li>
+    }
+</ul>
+

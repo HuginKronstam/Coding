@@ -1,0 +1,25 @@
+﻿@model IEnumerable<TravelForum.Models.Post>
+
+@{
+    ViewBag.Title = "ShowTopic";
+}
+
+<h2>Test : @ViewBag.TopicName</h2>
+
+
+<ul class="list-group-flush">
+    @foreach (var post in Model)
+    {
+
+    <li class="list-group-item">
+        @*@Html.ActionLink(post.Subject, "ShowPost/" + post.ID, new { id = post.ID }, "Post")*@
+        @Html.ActionLink(post.Subject, "ShowPost","Post", new { id = post.ID }, null)
+        @*<a>@post.Subject</a>
+        <span class="badge badge-primary badge-pill">@post.ID</span>*@
+    </li>
+    }
+</ul>
+
+@*<p>@Html.DisplayNameFor(model => model.TopicName.): @Html.DisplayNameFor(model => model.Author)</p>
+    <p>@Html.DisplayFor(model => model.Content)</p>*@
+

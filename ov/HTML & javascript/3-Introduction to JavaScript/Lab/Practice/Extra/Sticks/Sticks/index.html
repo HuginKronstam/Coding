@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <title>Sticks Game</title>
+</head>
+
+<body>
+    <h1>Sticks Game</h1>
+
+    <p>
+        select computer level and click on sticks to remove or click Start computer for computer to make first move
+    </p>
+
+    <form>
+        <fieldset id="selction_fs">
+            <legend>Choose your computer oppent</legend>
+            <input type="radio" name="oppent_grp" value="0" checked>Stupid player</input>
+            <input type="radio" name="oppent_grp" value="1">Random player</input>
+            <input type="radio" name="oppent_grp" value="2">Smart player</input>
+            <input type="radio" name="oppent_grp" value="3">AI player</input>
+            <input type="button" id="start_computer" value="Start Computer" />
+        </fieldset>
+    </form>
+
+    <div id="sticks"></div>
+
+    <span id="message">Pick your sticks</span>
+
+    <div id="button"></div>
+
+    <div id="scoretable">
+        <span id="stupidRB">Stupid Player 0-0</span>
+        <br />
+        <span id="randomRB">Random Player 0-0</span>
+        <br />
+        <span id="smartRB">Smart Player 0-0</span>
+        <br />
+        <span id="aiRB">AI Player 0-0</span>
+    </div>
+
+    <script src="scripts/game.js"></script>
+</body>
+
+</html>

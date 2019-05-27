@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Map";
+}
+<p><h1>Kaldashia</h1></p>
+<figure>
+    <!--https://hackernoon.com/how-to-use-jquery-and-html5-map-tag-to-highlight-image-areas-on-mouseover-b7c728947ed3-->
+    <!--^^ the Tutorial i used to get the map working-->
+    <img src="~/Content/images/kaldashiafix.png" usemap="#kaldashia" class="map" />
+    <map name="kaldashia">
+        <!--Dominaria-->
+        <area alt="Urza Shard" title="Urza" href="#" shape="poly" coords="434,651,487,477,654,477,707,650,571,757" />
+        <area alt="Diamond Shard" title="Diamond" href="#" shape="poly" coords="449,430,551,105,581,106,684,431" />
+        <area alt="Sapphire Shard" title="Sapphire" href="#" shape="poly" coords="763,663,1016,468,1014,440,686,430" />
+        <area alt="Opal Shard" title="Opal" href="#" shape="poly" coords="568,821,762,667,853,980,827,1006" />
+        <area alt="Ruby Shard" title="Ruby" href="#" shape="poly" coords="368,665,565,824,307,1006,279,978" />
+        <area alt="Emerald Shard" title="Emerald" href="#" shape="poly" coords="369,663,446,430,128,440,121,474" />
+        <!--Tarkir-->
+        <area alt="Shard" title="Necra" href="#" shape="poly" coords="447,431,548,105,128,437" />
+        <area alt="Shard" title="Raka" href="#" shape="poly" coords="684,429,584,106,1012,438" />
+        <area alt="Shard" title="Ana" href="#" shape="poly" coords="1020,472,763,664,853,975" />
+        <area alt="Shard" title="Dega" href="#" shape="poly" coords="826,1009,565,824,310,1007" />
+        <area alt="Shard" title="Ceta" href="#" shape="poly" coords="369,666,119,474,279,977" />
+        <!--Couruscant-->
+        <area alt="Shard" title="6" href="#" shape="poly" coords="393,683,401,654,567,788,546,806" />
+        <area alt="Shard" title="7" href="#" shape="poly" coords="570,788,589,802,742,680,732,655" />
+        <area alt="Shard" title="8" href="#" shape="poly" coords="402,652,467,456,439,457,380,635" />
+        <area alt="Shard" title="9" href="#" shape="poly" coords="467,455,477,431,656,431,665,456" />
+        <area alt="Shard" title="0" href="#" shape="poly" coords="734,656,753,639,692,457,669,458" />
+        <!--Ravnica-->
+        <area alt="Shard" title="11" href="#" shape="poly" coords="127,437,81,440,564,60,551,105" />
+        <area alt="Shard" title="12" href="#" shape="poly" coords="582,105,1015,441,1056,439,568,60" />
+        <area alt="Shard" title="13" href="#" shape="poly" coords="1020,470,1056,441,869,1032,854,977" />
+        <area alt="Shard" title="14" href="#" shape="poly" coords="866,1035,827,1009,308,1008,271,1033" />
+        <area alt="Shard" title="15" href="#" shape="poly" coords="279,979,263,1030,80,445,121,476" />
+        <!--Alara-->
+        <area alt="Shard" title="Stroaque" href="#" shape="poly" coords="257,172,223,129,257,105,290,83,337,59,391,37,439,22,507,10,551,6,601,7,644,12,693,21,731,31,762,42,792,54,828,72,866,94,897,116,926,142,952,164,912,198,865,157,810,122,749,92,674,69,621,59,565,57,495,62,433,76,379,96,333,117" />
+        <area alt="Shard" title="Lotrania" href="#" shape="poly" coords="915,201,952,165,990,207,1018,240,1045,282,1067,321,1088,368,1104,413,1116,454,1123,494,1130,537,1131,567,1132,598,1131,655,1124,702,1112,756,1061,744,1069,704,1075,662,1079,623,1079,572,1076,540,1070,494,1057,437,1040,387,1018,338,992,295,965,257" />
+        <area alt="Shard" title="Achein" href="#" shape="poly" coords="1060,744,1111,757,1094,815,1074,862,1054,900,1029,943,1004,976,971,1015,944,1045,910,1071,880,1094,846,1118,800,1141,749,1163,704,1175,648,1187,610,1192,567,1193,567,1139,609,1135,655,1131,690,1122,733,1110,783,1088,829,1063,869,1035,898,1012,931,980,953,955,971,929,993,902,1010,873,1023,843,1039,812,1049,786" />
+        <area alt="Shard" title="Deskal" href="#" shape="poly" coords="567,1194,566,1139,508,1135,460,1126,409,1112,358,1089,304,1059,264,1034,224,993,191,962,170,933,145,899,129,871,111,834,94,794,80,752,28,770,44,822,59,855,75,887,94,921,116,955,135,978,158,1006,190,1040,222,1068,254,1093,284,1113,313,1129,346,1145,381,1161,431,1177,471,1185,507,1191" />
+        <area alt="Shard" title="Aspya" href="#" shape="poly" coords="80,751,27,769,18,733,11,682,6,623,6,563,11,514,20,462,34,410,47,371,69,323,89,284,113,247,141,214,174,173,202,149,224,132,255,173,221,201,186,240,155,282,126,327,104,370,88,417,70,479,63,523,58,574,59,625,64,675,70,712" />
+        <!--Zendikar-->
+        <area alt="Shard" title="Guul Draz" href="#" shape="poly" coords="269,1034,866,1036,816,1071,776,1093,718,1115,657,1131,567,1138,513,1135,461,1126,397,1108,325,1073" />
+        <area alt="Shard" title="Bala Ged" href="#" shape="poly" coords="79,450,263,1030,239,1010,209,980,185,954,168,930,147,899,125,862,107,826,80,752,66,688,60,640,59,574,65,515" />
+        <area alt="Shard" title="Sejiri" href="#" shape="poly" coords="82,437,562,59,496,64,446,75,403,89,363,106,308,135,257,173,214,210,177,253,145,298,111,361" />
+        <area alt="Shard" title="Ondu" href="#" shape="poly" coords="568,58,1056,437,1027,361,1000,309,969,264,914,201,862,157,787,111,716,83,647,66" />
+        <area alt="Shard" title="Murasa" href="#" shape="poly" coords="867,1033,1057,442,1071,501,1077,562,1078,635,1071,698,1060,744,1043,797,1019,854,989,905,960,946,915,995,884,1024" />
+    </map>
+</figure>
+
+
+

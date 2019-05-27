@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="EDMExerciseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Hobbies">
+          <Key>
+            <PropertyRef Name="HobbyID" />
+          </Key>
+          <Property Name="HobbyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HobbyName" Type="varchar" MaxLength="50" />
+          <Property Name="HobbyPrice" Type="float" />
+        </EntityType>
+        <EntityType Name="StudentClass">
+          <Key>
+            <PropertyRef Name="ClassId" />
+          </Key>
+          <Property Name="ClassId" Type="int" Nullable="false" />
+          <Property Name="ClassValue" Type="varchar" MaxLength="50" />
+          <Property Name="Teacher" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Students">
+          <Key>
+            <PropertyRef Name="StudentID" />
+          </Key>
+          <Property Name="StudentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Class" Type="int" />
+          <Property Name="HobbyID" Type="int" />
+        </EntityType>
+        <Association Name="FK__Students__Class__44FF419A">
+          <End Role="StudentClass" Type="Self.StudentClass" Multiplicity="0..1" />
+          <End Role="Students" Type="Self.Students" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StudentClass">
+              <PropertyRef Name="ClassId" />
+            </Principal>
+            <Dependent Role="Students">
+              <PropertyRef Name="Class" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Students__HobbyI__45F365D3">
+          <End Role="Hobbies" Type="Self.Hobbies" Multiplicity="0..1" />
+          <End Role="Students" Type="Self.Students" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Hobbies">
+              <PropertyRef Name="HobbyID" />
+            </Principal>
+            <Dependent Role="Students">
+              <PropertyRef Name="HobbyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="EDMExerciseModelStoreContainer">
+          <EntitySet Name="Hobbies" EntityType="Self.Hobbies" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StudentClass" EntityType="Self.StudentClass" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Students__Class__44FF419A" Association="Self.FK__Students__Class__44FF419A">
+            <End Role="StudentClass" EntitySet="StudentClass" />
+            <End Role="Students" EntitySet="Students" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Students__HobbyI__45F365D3" Association="Self.FK__Students__HobbyI__45F365D3">
+            <End Role="Hobbies" EntitySet="Hobbies" />
+            <End Role="Students" EntitySet="Students" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EDMExerciseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="StudentClass">
+          <Key>
+            <PropertyRef Name="ClassId" />
+          </Key>
+          <Property Name="ClassId" Type="Int32" Nullable="false" />
+          <Property Name="ClassValue" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Teacher" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Students" Relationship="Self.FK__Students__Class__398D8EEE" FromRole="StudentClass" ToRole="Students" />
+        </EntityType>
+        <EntityType Name="Students">
+          <Key>
+            <PropertyRef Name="StudentID" />
+          </Key>
+          <Property Name="StudentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Class" Type="Int32" />
+          <NavigationProperty Name="StudentClass" Relationship="Self.FK__Students__Class__398D8EEE" FromRole="Students" ToRole="StudentClass" />
+          <Property Name="HobbyID" Type="Int32" />
+          <NavigationProperty Name="Hobbies" Relationship="EDMExerciseModel.FK__Students__HobbyI__45F365D3" FromRole="Students" ToRole="Hobbies" />
+        </EntityType>
+        <Association Name="FK__Students__Class__398D8EEE">
+          <End Role="StudentClass" Type="Self.StudentClass" Multiplicity="0..1" />
+          <End Role="Students" Type="Self.Students" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StudentClass">
+              <PropertyRef Name="ClassId" />
+            </Principal>
+            <Dependent Role="Students">
+              <PropertyRef Name="Class" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="EDMExerciseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="StudentClass" EntityType="Self.StudentClass" />
+          <EntitySet Name="Students" EntityType="Self.Students" />
+          <AssociationSet Name="FK__Students__Class__398D8EEE" Association="Self.FK__Students__Class__398D8EEE">
+            <End Role="StudentClass" EntitySet="StudentClass" />
+            <End Role="Students" EntitySet="Students" />
+          </AssociationSet>
+          <EntitySet Name="Hobbies" EntityType="EDMExerciseModel.Hobbies" />
+          <AssociationSet Name="FK__Students__HobbyI__45F365D3" Association="EDMExerciseModel.FK__Students__HobbyI__45F365D3">
+            <End Role="Hobbies" EntitySet="Hobbies" />
+            <End Role="Students" EntitySet="Students" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Hobbies">
+          <Key>
+            <PropertyRef Name="HobbyID" />
+          </Key>
+          <Property Name="HobbyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HobbyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HobbyPrice" Type="Double" />
+          <NavigationProperty Name="Students" Relationship="EDMExerciseModel.FK__Students__HobbyI__45F365D3" FromRole="Hobbies" ToRole="Students" />
+        </EntityType>
+        <Association Name="FK__Students__HobbyI__45F365D3">
+          <End Type="EDMExerciseModel.Hobbies" Role="Hobbies" Multiplicity="0..1" />
+          <End Type="EDMExerciseModel.Students" Role="Students" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Hobbies">
+              <PropertyRef Name="HobbyID" />
+            </Principal>
+            <Dependent Role="Students">
+              <PropertyRef Name="HobbyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EDMExerciseModelStoreContainer" CdmEntityContainer="EDMExerciseEntities">
+          <EntitySetMapping Name="StudentClass">
+            <EntityTypeMapping TypeName="EDMExerciseModel.StudentClass">
+              <MappingFragment StoreEntitySet="StudentClass">
+                <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+                <ScalarProperty Name="ClassValue" ColumnName="ClassValue" />
+                <ScalarProperty Name="Teacher" ColumnName="Teacher" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Students">
+            <EntityTypeMapping TypeName="EDMExerciseModel.Students">
+              <MappingFragment StoreEntitySet="Students">
+                <ScalarProperty Name="HobbyID" ColumnName="HobbyID" />
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Class" ColumnName="Class" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Hobbies">
+            <EntityTypeMapping TypeName="EDMExerciseModel.Hobbies">
+              <MappingFragment StoreEntitySet="Hobbies">
+                <ScalarProperty Name="HobbyPrice" ColumnName="HobbyPrice" />
+                <ScalarProperty Name="HobbyName" ColumnName="HobbyName" />
+                <ScalarProperty Name="HobbyID" ColumnName="HobbyID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

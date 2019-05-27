@@ -1,0 +1,9 @@
+﻿@model TravelForum.Models.Post
+@{
+    ViewBag.Title = Model.Subject;
+}
+
+
+<h2>@Html.DisplayNameFor(model=> model.Subject): @Html.DisplayNameFor(model => model.Content)</h2>
+<p>@Html.DisplayNameFor(model => model.Author): @Html.DisplayNameFor(model => model.Author)</p>
+<p>@Html.DisplayFor(model => model.Content)</p>

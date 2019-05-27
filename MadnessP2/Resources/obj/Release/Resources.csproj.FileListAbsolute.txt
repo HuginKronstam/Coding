@@ -1,0 +1,11 @@
+D:\Coding\MadnessP2\Resources\bin\Release\Resources.dll
+D:\Coding\MadnessP2\Resources\bin\Release\Resources.pdb
+D:\Coding\MadnessP2\Resources\bin\Release\da\Resources.resources.dll
+D:\Coding\MadnessP2\Resources\obj\Release\Resources.csprojAssemblyReference.cache
+D:\Coding\MadnessP2\Resources\obj\Release\Resources.language.resources
+D:\Coding\MadnessP2\Resources\obj\Release\Resources.language.da.resources
+D:\Coding\MadnessP2\Resources\obj\Release\Resources.csproj.GenerateResource.cache
+D:\Coding\MadnessP2\Resources\obj\Release\Resources.csproj.CoreCompileInputs.cache
+D:\Coding\MadnessP2\Resources\obj\Release\da\Resources.resources.dll
+D:\Coding\MadnessP2\Resources\obj\Release\Resources.dll
+D:\Coding\MadnessP2\Resources\obj\Release\Resources.pdb

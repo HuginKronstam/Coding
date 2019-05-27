@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <script>
+        function replyHandler(event)
+        {
+            alert("Reply: " + event.data);
+        }
+
+        function errorHandler(event)
+        {
+            console.log(event.message +" der er sket en fejl")
+        }
+        var Msg = function (cmd, data)
+        {
+            this.command = cmd;
+            this.data = data;
+        };
+        var myWebWorker;
+        //alternativ måde at skrive det på if(typeof(Worker)!=="undefined")
+
+            if (typeof (Worker) !== "undefined")
+        {
+            myWebWorker = new Worker('/scripts/workers/myWebWorker.js');
+            myWebWorker.addEventListener('message', replyHandler, false);
+            myWebWorker.addEventListener('error', errorHandler, false);
+            //myWebWorker.postMessage("Here is a message for you my friend!");
+            myWebWorker.postMessage(new Msg("DOWORK", "Please fast"));
+            myWebWorker.postMessage(new Msg("DOMOREWORK", "Please faster"));
+            myWebWorker.postMessage(new Msg("FINISH", "Work Complete"));
+
+        };
+
+    </script>
+<footer>
+    <p>COPYRIGHT MEEEE!!</p>
+</footer>
+</body>
+</html>
