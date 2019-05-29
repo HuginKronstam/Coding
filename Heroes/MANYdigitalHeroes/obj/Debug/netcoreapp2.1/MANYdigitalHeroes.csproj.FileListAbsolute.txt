@@ -1,0 +1,14 @@
+D:\Coding\Heroes\MANYdigitalHeroes\bin\Debug\netcoreapp2.1\MANYdigitalHeroes.deps.json
+D:\Coding\Heroes\MANYdigitalHeroes\bin\Debug\netcoreapp2.1\MANYdigitalHeroes.runtimeconfig.json
+D:\Coding\Heroes\MANYdigitalHeroes\bin\Debug\netcoreapp2.1\MANYdigitalHeroes.runtimeconfig.dev.json
+D:\Coding\Heroes\MANYdigitalHeroes\bin\Debug\netcoreapp2.1\MANYdigitalHeroes.dll
+D:\Coding\Heroes\MANYdigitalHeroes\bin\Debug\netcoreapp2.1\MANYdigitalHeroes.pdb
+D:\Coding\Heroes\MANYdigitalHeroes\obj\Debug\netcoreapp2.1\MANYdigitalHeroes.csprojAssemblyReference.cache
+D:\Coding\Heroes\MANYdigitalHeroes\obj\Debug\netcoreapp2.1\MANYdigitalHeroes.csproj.CoreCompileInputs.cache
+D:\Coding\Heroes\MANYdigitalHeroes\obj\Debug\netcoreapp2.1\MANYdigitalHeroes.RazorAssemblyInfo.cache
+D:\Coding\Heroes\MANYdigitalHeroes\obj\Debug\netcoreapp2.1\MANYdigitalHeroes.RazorAssemblyInfo.cs
+D:\Coding\Heroes\MANYdigitalHeroes\obj\Debug\netcoreapp2.1\MANYdigitalHeroes.AssemblyInfoInputs.cache
+D:\Coding\Heroes\MANYdigitalHeroes\obj\Debug\netcoreapp2.1\MANYdigitalHeroes.AssemblyInfo.cs
+D:\Coding\Heroes\MANYdigitalHeroes\obj\Debug\netcoreapp2.1\MANYdigitalHeroes.RazorTargetAssemblyInfo.cache
+D:\Coding\Heroes\MANYdigitalHeroes\obj\Debug\netcoreapp2.1\MANYdigitalHeroes.dll
+D:\Coding\Heroes\MANYdigitalHeroes\obj\Debug\netcoreapp2.1\MANYdigitalHeroes.pdb
