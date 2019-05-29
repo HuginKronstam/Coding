@@ -9,7 +9,7 @@ using MANYdigitalHeroes.Models;
 
 namespace MANYdigitalHeroes.Controllers
 {
-    [Route("api/hero")]
+    [Route("api")]
     [ApiController]
     public class HeroController : ControllerBase
     {
@@ -28,7 +28,7 @@ namespace MANYdigitalHeroes.Controllers
             }
         }
         //GET: api/Hero
-        //[Route("/GetHeroes")]
+        [Route("GetHeroes")]
         [HttpGet]                                          
         public async Task<ActionResult<IEnumerable<Hero>>> GetHeroes()
         {
@@ -36,7 +36,7 @@ namespace MANYdigitalHeroes.Controllers
         }
 
         //GET: api/Hero/5
-        //[Route("GetHero")]
+        [Route("GetHero/{id}")]
         [HttpGet("{id}")]
         public async Task<ActionResult<Hero>> GetHero(int id)
         {
@@ -52,6 +52,7 @@ namespace MANYdigitalHeroes.Controllers
 
         //POST: api/Hero
         [HttpPost]
+        [Route("CreateHero")]
         public async Task<ActionResult<Hero>> PostHero(Hero hero)
         {
             _context.Hero.Add(hero);
@@ -61,6 +62,7 @@ namespace MANYdigitalHeroes.Controllers
         }
 
         //PUT: api/Hero/5
+        [Route("EditHero")]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutHero(int ID, Hero hero)
         {
@@ -76,6 +78,7 @@ namespace MANYdigitalHeroes.Controllers
         }
 
         //DELETE: api/Hero/5
+        [Route("DeleteHero/{id}")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteHero(int id)
         {
